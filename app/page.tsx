@@ -23,7 +23,7 @@ export default function Portfolio() {
         <div className="pointer-events-none absolute inset-0">
           <div
             data-anim
-            className="absolute -top-32 left-[12%] h-[30rem] w-[30rem] rounded-full bg-[var(--color-android)] opacity-25 blur-[130px]"
+            className="absolute -top-32 left-[12%] h-[30rem] w-[30rem] rounded-full bg-[var(--color-brand-500)] opacity-25 blur-[130px]"
             style={{ animation: "aurora 20s ease-in-out infinite" }}
           />
           <div
@@ -62,7 +62,7 @@ export default function Portfolio() {
           </span>
           <h1 className="mt-6 max-w-4xl text-[42px] font-bold leading-[1.04] tracking-tight sm:text-[64px]">
             {PROFILE.tagline}
-            <span className="bg-gradient-to-r from-[var(--color-android)] via-[var(--color-brand-400)] to-[var(--color-ios)] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[var(--color-brand-300)] via-[var(--color-brand-400)] to-[var(--color-ios)] bg-clip-text text-transparent">
               {PROFILE.taglineAccent}
             </span>
           </h1>
@@ -219,7 +219,7 @@ export default function Portfolio() {
         <div className="pointer-events-none absolute inset-0">
           <div
             data-anim
-            className="absolute bottom-0 left-1/4 h-80 w-80 rounded-full bg-[var(--color-android)] opacity-15 blur-[120px]"
+            className="absolute bottom-0 left-1/4 h-80 w-80 rounded-full bg-[var(--color-brand-500)] opacity-15 blur-[120px]"
             style={{ animation: "aurora 24s ease-in-out infinite" }}
           />
           <div
