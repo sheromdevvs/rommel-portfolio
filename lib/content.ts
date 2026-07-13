@@ -8,8 +8,9 @@ export const PROFILE = {
   email: "alexanderommelsw@gmail.com",
   phone: "+593 96 335 6744",
   github: "https://github.com/sheromdevvs",
-  // Update this once you have a LinkedIn URL; leave empty to hide the link.
-  linkedin: "",
+  linkedin: "https://www.linkedin.com/in/rommel-v-23b818243",
+  // Downloadable CV served from /public; leave empty to hide the button.
+  cv: "/Rommel-Valdiviezo-CV.pdf",
   summary:
     "Mobile software engineer specializing in fintech platforms, building and scaling native iOS and Android applications used by 500,000+ users. Experienced in payment systems, modular mobile architectures, application reliability and mobile security — with a proven ability to lead mobile initiatives from MVP to production.",
   tagline: "I build native mobile apps that",

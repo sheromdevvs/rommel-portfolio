@@ -94,6 +94,19 @@ export default function Portfolio() {
                 LinkedIn
               </a>
             )}
+            {PROFILE.cv && (
+              <a
+                href={PROFILE.cv}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-6 py-3 font-medium text-white transition hover:bg-white/10"
+              >
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 3v12m0 0l4-4m-4 4l-4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2" />
+                </svg>
+                Download CV
+              </a>
+            )}
           </div>
 
           <div className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-white/45">
