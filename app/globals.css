@@ -28,6 +28,12 @@
   --color-accent-hover: #047857;
   --color-accent-soft: #d1fae5;
 
+  /* ── Platform brand colors (real Android / iOS marks) ──────────────── */
+  --color-android: #3ddc84; /* Android robot green */
+  --color-android-soft: #e3fbee;
+  --color-ios: #0a84ff; /* iOS system blue (dark-mode variant) */
+  --color-ios-soft: #e6f1ff;
+
   /* ── Typography — wired from next/font in layout.tsx ───────────────── */
   --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, -apple-system,
     "Segoe UI", sans-serif;

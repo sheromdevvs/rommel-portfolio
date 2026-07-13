@@ -1,4 +1,5 @@
 import Reveal from "@/components/Reveal";
+import { AppleLogo, AndroidLogo } from "@/components/PlatformLogos";
 import {
   PROFILE,
   STATS,
@@ -22,12 +23,12 @@ export default function Portfolio() {
         <div className="pointer-events-none absolute inset-0">
           <div
             data-anim
-            className="absolute -top-32 left-[12%] h-[30rem] w-[30rem] rounded-full bg-[var(--color-brand-500)] opacity-25 blur-[130px]"
+            className="absolute -top-32 left-[12%] h-[30rem] w-[30rem] rounded-full bg-[var(--color-android)] opacity-25 blur-[130px]"
             style={{ animation: "aurora 20s ease-in-out infinite" }}
           />
           <div
             data-anim
-            className="absolute top-8 right-[8%] h-96 w-96 rounded-full bg-[var(--color-brand-400)] opacity-20 blur-[130px]"
+            className="absolute top-8 right-[8%] h-96 w-96 rounded-full bg-[var(--color-ios)] opacity-20 blur-[130px]"
             style={{ animation: "aurora 26s ease-in-out infinite reverse" }}
           />
         </div>
@@ -61,11 +62,27 @@ export default function Portfolio() {
           </span>
           <h1 className="mt-6 max-w-4xl text-[42px] font-bold leading-[1.04] tracking-tight sm:text-[64px]">
             {PROFILE.tagline}
-            <span className="bg-gradient-to-r from-[var(--color-brand-300)] via-[var(--color-brand-400)] to-[var(--color-brand-500)] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[var(--color-android)] via-[var(--color-brand-400)] to-[var(--color-ios)] bg-clip-text text-transparent">
               {PROFILE.taglineAccent}
             </span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/65">{PROFILE.summary}</p>
+
+          {/* Platform strip — the two ecosystems Rommel ships to, in brand color */}
+          <div className="mt-7 flex flex-wrap items-center gap-3">
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3.5 py-2 text-sm font-semibold">
+              <AppleLogo className="h-4 w-4 text-white" />
+              <span className="text-white/90">iOS</span>
+              <span className="h-1 w-1 rounded-full bg-[var(--color-ios)]" />
+              <span className="text-white/50">Swift · SwiftUI</span>
+            </span>
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3.5 py-2 text-sm font-semibold">
+              <AndroidLogo className="h-4 w-4 text-[var(--color-android)]" />
+              <span className="text-white/90">Android</span>
+              <span className="h-1 w-1 rounded-full bg-[var(--color-android)]" />
+              <span className="text-white/50">Kotlin · Compose</span>
+            </span>
+          </div>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <a
@@ -122,9 +139,17 @@ export default function Portfolio() {
         <div className="mx-auto grid max-w-6xl grid-cols-2 gap-px px-6 py-10 sm:grid-cols-4">
           {STATS.map((s) => (
             <div key={s.label} className="px-2 text-center sm:text-left">
-              <div className="text-2xl font-bold tracking-tight text-[var(--color-accent)] sm:text-[28px]">
-                {s.value}
-              </div>
+              {s.value === "iOS + Android" ? (
+                <div className="flex items-center justify-center gap-2.5 sm:justify-start">
+                  <AppleLogo className="h-6 w-6 text-[var(--color-ink)]" />
+                  <span className="text-2xl font-bold tracking-tight text-[var(--color-muted)] sm:text-[28px]">+</span>
+                  <AndroidLogo className="h-6 w-6 text-[var(--color-android)]" />
+                </div>
+              ) : (
+                <div className="text-2xl font-bold tracking-tight text-[var(--color-accent)] sm:text-[28px]">
+                  {s.value}
+                </div>
+              )}
               <div className="mt-1 text-xs leading-snug text-[var(--color-muted)]">{s.label}</div>
             </div>
           ))}
@@ -194,8 +219,13 @@ export default function Portfolio() {
         <div className="pointer-events-none absolute inset-0">
           <div
             data-anim
-            className="absolute bottom-0 left-1/3 h-80 w-80 rounded-full bg-[var(--color-brand-500)] opacity-20 blur-[120px]"
+            className="absolute bottom-0 left-1/4 h-80 w-80 rounded-full bg-[var(--color-android)] opacity-15 blur-[120px]"
             style={{ animation: "aurora 24s ease-in-out infinite" }}
+          />
+          <div
+            data-anim
+            className="absolute right-1/4 top-0 h-72 w-72 rounded-full bg-[var(--color-ios)] opacity-15 blur-[120px]"
+            style={{ animation: "aurora 28s ease-in-out infinite reverse" }}
           />
         </div>
         <section className="relative z-10 mx-auto max-w-6xl px-6 py-20">
@@ -213,7 +243,13 @@ export default function Portfolio() {
             {SKILLS.map((s, i) => (
               <Reveal key={s.group} delay={i * 60}>
                 <div className="h-full rounded-2xl border border-white/10 bg-white/[0.03] p-6">
-                  <h3 className="text-[13px] font-bold uppercase tracking-widest text-[var(--color-brand-300)]">
+                  <h3 className="flex items-center gap-2 text-[13px] font-bold uppercase tracking-widest text-[var(--color-brand-300)]">
+                    {s.group === "Mobile" && (
+                      <span className="flex items-center gap-1.5">
+                        <AppleLogo className="h-3.5 w-3.5 text-white/80" />
+                        <AndroidLogo className="h-3.5 w-3.5 text-[var(--color-android)]" />
+                      </span>
+                    )}
                     {s.group}
                   </h3>
                   <div className="mt-4 flex flex-wrap gap-2">

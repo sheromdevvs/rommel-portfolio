@@ -7,7 +7,7 @@ export const PROFILE = {
   location: "Quito, Ecuador",
   email: "alexanderommelsw@gmail.com",
   phone: "+593 96 335 6744",
-  github: "https://github.com/sheromdevvs",
+  github: "https://github.com/alexanderommel",
   linkedin: "https://www.linkedin.com/in/rommel-v-23b818243",
   // Downloadable CV served from /public; leave empty to hide the button.
   cv: "/Rommel-Valdiviezo-CV.pdf",
