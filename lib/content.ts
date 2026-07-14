@@ -215,6 +215,7 @@ export const PROJECTS: Project[] = [
     description:
       "A speaking-first English learning platform: real-time voice conversations with an AI that corrects mistakes in the moment, plus listening drills, connected-speech decoding and spaced-repetition vocabulary. Multi-tenant on Postgres.",
     stack: ["Next.js", "React", "OpenAI Realtime", "Prisma", "Postgres/Neon", "Vercel"],
+    href: "https://fluvia-mauve-mu.vercel.app/",
   },
 ];
 
