@@ -127,29 +127,25 @@ export const SECTORS: Sector[] = [
   {
     name: "Fintech",
     org: "PayPhone",
-    blurb:
-      "Payments at scale — digital card issuance, cross-border transfers, Tap-to-Phone NFC and PCI DSS security hardening for 500,000+ users.",
+    blurb: "Card issuance, cross-border transfers, Tap-to-Phone NFC, PCI DSS.",
     icon: "card",
   },
   {
     name: "Insurtech",
     org: "Willay",
-    blurb:
-      "Vehicle inspection and assessment — on-device camera, ML Kit and OCR pipelines automating document and damage capture.",
+    blurb: "Vehicle inspection — on-device camera, ML Kit and OCR capture.",
     icon: "shield",
   },
   {
     name: "EdTech",
-    org: "Fluvia · Escuela Politécnica Nacional",
-    blurb:
-      "An AI English-fluency platform, plus a research-workflow system serving a university department of 100+ researchers.",
+    org: "Fluvia · EPN",
+    blurb: "AI fluency platform; research workflows for 100+ researchers.",
     icon: "book",
   },
   {
     name: "HR Tech",
     org: "Entrevia",
-    blurb:
-      "AI voice mock interviews — real-time conversational simulations for technical and behavioral interview preparation.",
+    blurb: "Real-time AI voice mock interviews.",
     icon: "mic",
   },
 ];
@@ -170,12 +166,11 @@ export const STAGES: Stage[] = [
     label: "0 → 1",
     phase: "Pre-product-market fit",
     org: "Willay",
-    blurb:
-      "Joined at prototype stage and rebuilt an early Xamarin MVP into a native mobile platform, shipping it to the startup's first customers.",
+    blurb: "Rebuilt a Xamarin prototype into a native platform and shipped it to the startup's first customers.",
     points: [
-      "Decided what not to build in order to reach launch",
-      "Defined the mobile-backend API contracts from scratch",
-      "Shaped product direction in an early-stage team",
+      "Decided what not to build to reach launch",
+      "Defined API contracts from scratch",
+      "Shaped product direction",
     ],
     metric: "Launch → 2,000+ inspections",
   },
@@ -183,12 +178,11 @@ export const STAGES: Stage[] = [
     label: "1 → N",
     phase: "Scaling a live product",
     org: "PayPhone",
-    blurb:
-      "Came into a payment platform already serving half a million users and helped modernize it — without ever interrupting delivery.",
+    blurb: "Modernized a payment platform already serving half a million users — without interrupting delivery.",
     points: [
-      "Modularized a monolith while legacy features kept shipping",
-      "Hardened mobile security to PCI DSS requirements",
-      "Owned store releases and proposed CI/CD pipelines",
+      "Modularized a monolith while legacy kept shipping",
+      "Hardened security to PCI DSS",
+      "Owned App Store / Play Store releases",
     ],
     metric: "500,000+ users served",
   },

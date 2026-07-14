@@ -201,10 +201,6 @@ export default function Portfolio() {
             <h2 className="mt-2 text-[32px] font-bold tracking-tight sm:text-[40px]">
               Fintech first — and I adapt fast
             </h2>
-            <p className="mt-4 text-[var(--color-muted)]">
-              Payments at scale is where I go deepest, but I&apos;ve shipped production software across four
-              regulated and consumer domains.
-            </p>
           </div>
         </Reveal>
 
@@ -255,8 +251,7 @@ export default function Portfolio() {
                 From zero to one — and from one to half a million
               </h2>
               <p className="mt-4 text-white/60">
-                I&apos;ve built the first version a startup showed its earliest customers, and I&apos;ve modernized a
-                platform that was already carrying 500,000 of them. Knowing which job you&apos;re in is most of the work.
+                Knowing which job you&apos;re in is most of the work.
               </p>
             </div>
           </Reveal>
