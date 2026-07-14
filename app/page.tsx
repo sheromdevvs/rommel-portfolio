@@ -1,5 +1,5 @@
 import Reveal from "@/components/Reveal";
-import { AppleLogo, AndroidLogo } from "@/components/PlatformLogos";
+import { AppleLogo, AndroidLogo, WhatsAppLogo } from "@/components/PlatformLogos";
 import {
   PROFILE,
   STATS,
@@ -117,6 +117,17 @@ export default function Portfolio() {
             >
               Email me
             </a>
+            {PROFILE.whatsapp && (
+              <a
+                href={PROFILE.whatsapp}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-6 py-3 font-medium text-white transition hover:bg-white/10"
+              >
+                <WhatsAppLogo className="h-[17px] w-[17px] text-[#25D366]" />
+                WhatsApp
+              </a>
+            )}
             {PROFILE.github && (
               <a
                 href={PROFILE.github}
@@ -477,6 +488,17 @@ export default function Portfolio() {
               >
                 {PROFILE.email}
               </a>
+              {PROFILE.whatsapp && (
+                <a
+                  href={PROFILE.whatsapp}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-6 py-3 font-medium text-white transition hover:bg-white/10"
+                >
+                  <WhatsAppLogo className="h-[17px] w-[17px] text-[#25D366]" />
+                  WhatsApp
+                </a>
+              )}
               {PROFILE.github && (
                 <a
                   href={PROFILE.github}
@@ -497,6 +519,9 @@ export default function Portfolio() {
             <div className="flex gap-4">
               <a href="#experience" className="hover:text-white">Experience</a>
               <a href="#projects" className="hover:text-white">Projects</a>
+              {PROFILE.whatsapp && (
+                <a href={PROFILE.whatsapp} target="_blank" rel="noreferrer" className="hover:text-white">WhatsApp</a>
+              )}
               <a href={`mailto:${PROFILE.email}`} className="hover:text-white">Contact</a>
             </div>
           </div>

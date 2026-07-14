@@ -7,6 +7,8 @@ export const PROFILE = {
   location: "Quito, Ecuador",
   email: "alexanderommelsw@gmail.com",
   phone: "+593 96 335 6744",
+  // wa.me needs the number in international format, digits only.
+  whatsapp: "https://wa.me/593963356744",
   github: "https://github.com/alexanderommel",
   linkedin: "https://www.linkedin.com/in/rommel-v-23b818243",
   // Downloadable CV served from /public; leave empty to hide the button.
