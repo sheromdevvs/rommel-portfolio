@@ -181,7 +181,7 @@ export const STAGES: Stage[] = [
     blurb: "Modernized a payment platform already serving half a million users — without interrupting delivery.",
     points: [
       "Modularized a monolith while legacy kept shipping",
-      "Hardened security to PCI DSS",
+      "Cut NFC payment failures and revenue leakage",
       "Owned App Store / Play Store releases",
     ],
     metric: "500,000+ users served",
