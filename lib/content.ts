@@ -152,6 +152,46 @@ export const SECTORS: Sector[] = [
   },
 ];
 
+// Product-stage range: the 0→1 / 1→N contrast. This is the seniority signal —
+// it says "I know when to move fast and when to invest in architecture."
+export type Stage = {
+  label: string;
+  phase: string;
+  org: string;
+  blurb: string;
+  points: string[];
+  metric: string;
+};
+
+export const STAGES: Stage[] = [
+  {
+    label: "0 → 1",
+    phase: "Pre-product-market fit",
+    org: "Willay",
+    blurb:
+      "Joined at prototype stage and rebuilt an early Xamarin MVP into a native mobile platform, shipping it to the startup's first customers.",
+    points: [
+      "Decided what not to build in order to reach launch",
+      "Defined the mobile-backend API contracts from scratch",
+      "Shaped product direction in an early-stage team",
+    ],
+    metric: "Launch → 2,000+ inspections",
+  },
+  {
+    label: "1 → N",
+    phase: "Scaling a live product",
+    org: "PayPhone",
+    blurb:
+      "Came into a payment platform already serving half a million users and helped modernize it — without ever interrupting delivery.",
+    points: [
+      "Modularized a monolith while legacy features kept shipping",
+      "Hardened mobile security to PCI DSS requirements",
+      "Owned store releases and proposed CI/CD pipelines",
+    ],
+    metric: "500,000+ users served",
+  },
+];
+
 export type Project = {
   name: string;
   tagline: string;

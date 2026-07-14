@@ -4,6 +4,7 @@ import {
   PROFILE,
   STATS,
   SECTORS,
+  STAGES,
   SKILLS,
   EXPERIENCE,
   PROJECTS,
@@ -217,6 +218,71 @@ export default function Portfolio() {
           ))}
         </div>
       </section>
+
+      {/* ══ PRODUCT STAGE — the 0→1 / 1→N arc (dark) ════════════════════════ */}
+      <div id="stage" className="grain relative mt-20 overflow-hidden bg-[var(--color-sidebar)] text-white">
+        <div className="pointer-events-none absolute inset-0">
+          <div
+            data-anim
+            className="absolute left-[15%] top-1/2 h-72 w-72 -translate-y-1/2 rounded-full bg-[var(--color-brand-500)] opacity-20 blur-[120px]"
+            style={{ animation: "aurora 22s ease-in-out infinite" }}
+          />
+          <div
+            data-anim
+            className="absolute right-[15%] top-1/2 h-72 w-72 -translate-y-1/2 rounded-full bg-[var(--color-ios)] opacity-15 blur-[120px]"
+            style={{ animation: "aurora 26s ease-in-out infinite reverse" }}
+          />
+        </div>
+
+        <section className="relative z-10 mx-auto max-w-6xl px-6 py-20">
+          <Reveal>
+            <div className="mx-auto max-w-2xl text-center">
+              <p className="text-[11px] font-bold uppercase tracking-widest text-[var(--color-brand-300)]">
+                Product stage
+              </p>
+              <h2 className="mt-2 text-[32px] font-bold tracking-tight sm:text-[40px]">
+                From zero to one — and from one to half a million
+              </h2>
+              <p className="mt-4 text-white/60">
+                I&apos;ve built the first version a startup showed its earliest customers, and I&apos;ve modernized a
+                platform that was already carrying 500,000 of them. Knowing which job you&apos;re in is most of the work.
+              </p>
+            </div>
+          </Reveal>
+
+          <div className="mt-12 grid gap-4 md:grid-cols-2">
+            {STAGES.map((s, i) => (
+              <Reveal key={s.label} delay={i * 80}>
+                <div className="flex h-full flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-7">
+                  <div className="flex items-baseline justify-between gap-3">
+                    <span className="bg-gradient-to-r from-[var(--color-brand-300)] to-[var(--color-ios)] bg-clip-text text-[32px] font-bold tracking-tight text-transparent">
+                      {s.label}
+                    </span>
+                    <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] font-semibold text-white/70">
+                      {s.org}
+                    </span>
+                  </div>
+                  <p className="mt-2 text-[13px] font-bold uppercase tracking-widest text-[var(--color-brand-300)]">
+                    {s.phase}
+                  </p>
+                  <p className="mt-3 text-sm leading-relaxed text-white/65">{s.blurb}</p>
+
+                  <ul className="mt-5 space-y-2">
+                    {s.points.map((p) => (
+                      <li key={p} className="flex gap-2.5 text-sm text-white/80">
+                        <span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-brand-400)]" />
+                        {p}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <p className="mt-6 border-t border-white/10 pt-4 text-sm font-bold text-white">{s.metric}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </section>
+      </div>
 
       {/* ══ EXPERIENCE (light) ══════════════════════════════════════════════ */}
       <section id="experience" className="mx-auto max-w-5xl px-6 py-20">
