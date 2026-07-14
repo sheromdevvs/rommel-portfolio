@@ -112,6 +112,46 @@ export const EXPERIENCE: Experience[] = [
   },
 ];
 
+// Domains shipped in. Fintech leads deliberately — it's the strongest signal.
+// Each sector is backed by real work; don't add one without a project behind it.
+export type Sector = {
+  name: string;
+  org: string;
+  blurb: string;
+  icon: "card" | "shield" | "book" | "mic";
+};
+
+export const SECTORS: Sector[] = [
+  {
+    name: "Fintech",
+    org: "PayPhone",
+    blurb:
+      "Payments at scale — digital card issuance, cross-border transfers, Tap-to-Phone NFC and PCI DSS security hardening for 500,000+ users.",
+    icon: "card",
+  },
+  {
+    name: "Insurtech",
+    org: "Willay",
+    blurb:
+      "Vehicle inspection and assessment — on-device camera, ML Kit and OCR pipelines automating document and damage capture.",
+    icon: "shield",
+  },
+  {
+    name: "EdTech",
+    org: "Fluvia · Escuela Politécnica Nacional",
+    blurb:
+      "An AI English-fluency platform, plus a research-workflow system serving a university department of 100+ researchers.",
+    icon: "book",
+  },
+  {
+    name: "HR Tech",
+    org: "Entrevia",
+    blurb:
+      "AI voice mock interviews — real-time conversational simulations for technical and behavioral interview preparation.",
+    icon: "mic",
+  },
+];
+
 export type Project = {
   name: string;
   tagline: string;
@@ -128,6 +168,13 @@ export const PROJECTS: Project[] = [
       "An AI-powered mock interview platform for technical and behavioral prep. Integrates OpenAI, Vapi and ElevenLabs for real-time voice interview simulations with contextual AI responses.",
     stack: ["Next.js", "React", "OpenAI", "Vapi", "ElevenLabs", "Vercel"],
     href: "https://entrevia-dev.vercel.app/",
+  },
+  {
+    name: "Fluvia",
+    tagline: "AI English Fluency Platform",
+    description:
+      "A speaking-first English learning platform: real-time voice conversations with an AI that corrects mistakes in the moment, plus listening drills, connected-speech decoding and spaced-repetition vocabulary. Multi-tenant on Postgres.",
+    stack: ["Next.js", "React", "OpenAI Realtime", "Prisma", "Postgres/Neon", "Vercel"],
   },
 ];
 

@@ -3,11 +3,35 @@ import { AppleLogo, AndroidLogo } from "@/components/PlatformLogos";
 import {
   PROFILE,
   STATS,
+  SECTORS,
   SKILLS,
   EXPERIENCE,
   PROJECTS,
   EDUCATION,
 } from "@/lib/content";
+
+const SectorIco: Record<string, React.ReactNode> = {
+  card: (
+    <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="2" y="5" width="20" height="14" rx="2" /><path d="M2 10h20M6 15h4" />
+    </svg>
+  ),
+  shield: (
+    <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 3l8 3v6c0 4.5-3.2 8.3-8 9-4.8-.7-8-4.5-8-9V6z" /><path d="M9 12l2 2 4-4" />
+    </svg>
+  ),
+  book: (
+    <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M4 19.5V5a2 2 0 0 1 2-2h13v18H6.5A2.5 2.5 0 0 0 4 19.5z" /><path d="M8 7h7M8 11h7" />
+    </svg>
+  ),
+  mic: (
+    <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="9" y="2" width="6" height="12" rx="3" /><path d="M5 11a7 7 0 0 0 14 0M12 18v4" />
+    </svg>
+  ),
+};
 
 export default function Portfolio() {
   const initials = PROFILE.name
@@ -42,6 +66,7 @@ export default function Portfolio() {
               <span className="text-[18px] font-bold tracking-tight">{PROFILE.name}</span>
             </a>
             <div className="flex items-center gap-4">
+              <a href="#domains" className="hidden text-sm text-white/60 hover:text-white sm:inline">Domains</a>
               <a href="#experience" className="hidden text-sm text-white/60 hover:text-white sm:inline">Experience</a>
               <a href="#projects" className="hidden text-sm text-white/60 hover:text-white sm:inline">Projects</a>
               <a href="#skills" className="hidden text-sm text-white/60 hover:text-white sm:inline">Skills</a>
@@ -152,6 +177,43 @@ export default function Portfolio() {
               )}
               <div className="mt-1 text-xs leading-snug text-[var(--color-muted)]">{s.label}</div>
             </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ══ SECTORS / DOMAINS ═══════════════════════════════════════════════ */}
+      <section id="domains" className="mx-auto max-w-6xl px-6 pt-20">
+        <Reveal>
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="text-[11px] font-bold uppercase tracking-widest text-[var(--color-accent)]">Domains</p>
+            <h2 className="mt-2 text-[32px] font-bold tracking-tight sm:text-[40px]">
+              Fintech first — and I adapt fast
+            </h2>
+            <p className="mt-4 text-[var(--color-muted)]">
+              Payments at scale is where I go deepest, but I&apos;ve shipped production software across four
+              regulated and consumer domains.
+            </p>
+          </div>
+        </Reveal>
+
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {SECTORS.map((s, i) => (
+            <Reveal key={s.name} delay={i * 60}>
+              <div
+                className={`h-full rounded-2xl border p-6 shadow-[var(--shadow-card)] ${
+                  i === 0
+                    ? "border-[var(--color-accent)] bg-[var(--color-accent-soft)]"
+                    : "border-[var(--color-line)] bg-[var(--color-surface)]"
+                }`}
+              >
+                <span className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-[var(--color-surface)] text-[var(--color-accent)] shadow-sm">
+                  {SectorIco[s.icon]}
+                </span>
+                <h3 className="text-[17px] font-bold">{s.name}</h3>
+                <p className="mt-1 text-xs font-semibold text-[var(--color-accent)]">{s.org}</p>
+                <p className="mt-3 text-sm leading-relaxed text-[var(--color-muted)]">{s.blurb}</p>
+              </div>
+            </Reveal>
           ))}
         </div>
       </section>
