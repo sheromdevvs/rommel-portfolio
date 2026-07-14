@@ -1,4 +1,5 @@
 import Reveal from "@/components/Reveal";
+import CopyEmailButton from "@/components/CopyEmailButton";
 import { AppleLogo, AndroidLogo, WhatsAppLogo } from "@/components/PlatformLogos";
 import {
   PROFILE,
@@ -111,12 +112,11 @@ export default function Portfolio() {
           </div>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
-            <a
-              href={`mailto:${PROFILE.email}`}
-              className="rounded-xl bg-[var(--color-accent)] px-6 py-3 font-semibold text-white shadow-[0_10px_40px_-10px_var(--color-brand-500)] transition hover:bg-[var(--color-accent-hover)]"
-            >
-              Email me
-            </a>
+            <CopyEmailButton
+              email={PROFILE.email}
+              label="Email me"
+              className="inline-flex cursor-pointer items-center gap-2 rounded-xl bg-[var(--color-accent)] px-6 py-3 font-semibold text-white shadow-[0_10px_40px_-10px_var(--color-brand-500)] transition hover:bg-[var(--color-accent-hover)]"
+            />
             {PROFILE.whatsapp && (
               <a
                 href={PROFILE.whatsapp}
@@ -477,12 +477,11 @@ export default function Portfolio() {
               Open to mobile engineering roles. The fastest way to reach me is email.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-              <a
-                href={`mailto:${PROFILE.email}`}
-                className="rounded-xl bg-[var(--color-accent)] px-6 py-3 font-semibold text-white shadow-[0_10px_40px_-10px_var(--color-brand-500)] transition hover:bg-[var(--color-accent-hover)]"
-              >
-                {PROFILE.email}
-              </a>
+              <CopyEmailButton
+                email={PROFILE.email}
+                label={PROFILE.email}
+                className="inline-flex cursor-pointer items-center gap-2 rounded-xl bg-[var(--color-accent)] px-6 py-3 font-semibold text-white shadow-[0_10px_40px_-10px_var(--color-brand-500)] transition hover:bg-[var(--color-accent-hover)]"
+              />
               {PROFILE.whatsapp && (
                 <a
                   href={PROFILE.whatsapp}

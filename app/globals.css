@@ -89,6 +89,15 @@ html {
   animation: reveal-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
+/* Copy-confirmation toast (components/CopyEmailButton.tsx). */
+@keyframes toast-in {
+  from { opacity: 0; transform: translateY(12px) scale(0.96); }
+  to { opacity: 1; transform: none; }
+}
+.toast {
+  animation: toast-in 0.26s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
 /* Subtle film grain overlay for dark sections. */
 .grain::before {
   content: "";
@@ -102,6 +111,7 @@ html {
 
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; animation: none; }
+  .toast { animation: none; }
   [data-anim] { animation: none !important; }
   html { scroll-behavior: auto; }
 }
