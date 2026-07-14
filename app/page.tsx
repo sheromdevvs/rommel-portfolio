@@ -67,17 +67,11 @@ export default function Portfolio() {
               </span>
               <span className="text-[18px] font-bold tracking-tight">{PROFILE.name}</span>
             </a>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 sm:gap-5">
               <a href="#domains" className="hidden text-sm text-white/60 hover:text-white sm:inline">Domains</a>
-              <a href="#experience" className="hidden text-sm text-white/60 hover:text-white sm:inline">Experience</a>
-              <a href="#projects" className="hidden text-sm text-white/60 hover:text-white sm:inline">Projects</a>
+              <a href="#experience" className="text-sm text-white/60 hover:text-white">Experience</a>
+              <a href="#projects" className="text-sm text-white/60 hover:text-white">Projects</a>
               <a href="#skills" className="hidden text-sm text-white/60 hover:text-white sm:inline">Skills</a>
-              <a
-                href={`mailto:${PROFILE.email}`}
-                className="rounded-xl bg-[var(--color-accent)] px-4 py-2 text-sm font-semibold text-white shadow-[0_8px_30px_-8px_var(--color-brand-500)] transition hover:bg-[var(--color-accent-hover)]"
-              >
-                Get in touch
-              </a>
             </div>
           </nav>
         </header>
