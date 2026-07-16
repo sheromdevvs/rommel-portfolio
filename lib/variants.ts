@@ -35,7 +35,7 @@ export const IOS_VARIANT: Variant = {
 
 export const MOBILE_VARIANT: Variant = {
   id: "mobile",
-  cv: "/RommelValdiviezo-MobileAppDeveloper.pdf",
+  cv: "/MobileSoftwareEngineer-RommelValdiviezo.pdf",
   summary:
     "Mobile software engineer specializing in fintech platforms — building and scaling native iOS and Android apps used by 500,000+ users. Equally at home in Swift/SwiftUI and Kotlin/Compose, with experience in payment systems, modular mobile architectures, application reliability and mobile security — and a proven ability to lead mobile initiatives from MVP to production.",
   // Interleaved so neither ecosystem reads as secondary.
